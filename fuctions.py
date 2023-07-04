@@ -7,9 +7,13 @@ class atoom_property :
 
     def selecting_random_atom (self , atoms  ): # this method selecting the random atom from the list that we provide to it (this list is defin in the main.py file mr fozveh )
         self.atoms = atoms
+        print('this is atoms[1]' , atoms[1])
         selected_atom = random.choices( atoms[0] , weights =atoms[1] )[0] # randomly select with weight of the atom ( for example fe =4 )
-        self.position.append ( selected_atom)
-
+        self.position.append ( selected_atom )
+        with_atom_index = atoms[0].index(selected_atom) # find with atom is selected randomly
+        print('this is the index of the selected atom in the atoms 0', with_atom_index)
+        atoms[1][with_atom_index] -= 1
+        print('this is atoms[1]' , atoms[1])
         return (self.position)
 
 

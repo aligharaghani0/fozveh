@@ -14,7 +14,6 @@
 #
 # print(selected_element)
 
-import  random
-alio = [ 1 , 2, 3 ]
-chois = random.choice(alio)
-print(chois)
+alio = [ 'alio' , 'alioo']
+ind= alio.index('alio')
+print(ind)

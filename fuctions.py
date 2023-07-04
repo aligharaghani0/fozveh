@@ -7,8 +7,9 @@ class atoom_property :
 
     def selecting_random_atom (self , atoms  ): # this method selecting the random atom from the list that we provide to it (this list is defin in the main.py file mr fozveh )
         self.atoms = atoms
-        selected_atom = random.choice( atoms[0] )
+        selected_atom = random.choices( atoms[0] , weights =atoms[1] )[0] # randomly select with weight of the atom ( for example fe =4 )
         self.position.append ( selected_atom)
+
         return (self.position)
 
 

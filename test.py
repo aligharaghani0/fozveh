@@ -14,6 +14,12 @@
 #
 # print(selected_element)
 
-alio = [ 'alio' , 'alioo']
-ind= alio.index('alio')
-print(ind)
+alio = [ 1 , 2 ]
+zahra = [ 3 , 3 ]
+
+import numpy as np
+alioo = np.array ( alio )
+alioo[1] -=1
+print(alioo)
+valu = zahra - alioo
+print( valu)
